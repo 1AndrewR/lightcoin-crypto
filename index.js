@@ -5,7 +5,6 @@ class Account {
   }
 
   get balance() {
-    // Calculate the balance using the transaction objects.
     return this.transactions.reduce((sum, transaction) => sum + transaction.value, 0);
   }
 
@@ -30,7 +29,6 @@ class Transaction {
   }
 
   isAllowed() {
-    // Default implementation, can be overridden by subclasses
     return true;
   }
 }
